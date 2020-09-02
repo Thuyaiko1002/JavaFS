@@ -1,0 +1,6 @@
+Thuật toán kiểm tra số đối xứng.
+1.Nhập 1 số bất kì.
+3.Đảo ngược số vừa nhập.
+4.So sánh giá trị của số ban đầu và giá trị số đảo ngược.
+5.Nếu bằng nhau thì số đó là số đối xứng
+6.Ngược lại nếu không bằng nhau thì không phải là số đối xứng
