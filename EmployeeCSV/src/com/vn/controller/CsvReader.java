@@ -29,13 +29,7 @@ public class CsvReader {
 			while ((line = reader.readLine()) != null) {
 				String[] fields = line.split(",");
 				if (fields.length > 0) {
-					Employee employee = new Employee();
-					employee.setId(Integer.parseInt(fields[0]));
-					employee.setName(fields[1]);
-					employee.setAge(Integer.parseInt(fields[2]));
-					employee.setSalary(Float.parseFloat(fields[3]));
-					employee.setBirthday(convertStringToDate(fields[4]));
-					listEmployee.add(employee);
+					listEmployee.add(new Employee(Integer.parseInt(fields[0]), fields[1], Integer.parseInt(fields[2]), Float.parseFloat(fields[3]), convertStringToDate(fields[4])));
 				}
 			}
 			for (Employee employee : listEmployee) {
@@ -56,7 +50,6 @@ public class CsvReader {
 				e.printStackTrace();
 			}
 		}
-
 	}
 
 	private static Date convertStringToDate(String str) {

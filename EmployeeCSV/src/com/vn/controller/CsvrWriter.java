@@ -19,46 +19,11 @@ public class CsvrWriter {
 	private static void writeCSV(String filePath) {
 		List<Employee> listEmployee = new ArrayList<Employee>();
 
-		// create demo employee
-		Employee employee = new Employee();
-		employee.setId(1);
-		employee.setName("Thuy");
-		employee.setAge(26);
-		employee.setSalary(10000);
-		employee.setBirthday(convertStringToDate("1994/02/10"));
-		listEmployee.add(employee);
-
-		employee = new Employee();
-		employee.setId(2);
-		employee.setName("Hoang");
-		employee.setAge(24);
-		employee.setSalary(11000);
-		employee.setBirthday(convertStringToDate("1996/07/15"));
-		listEmployee.add(employee);
-
-		employee = new Employee();
-		employee.setId(3);
-		employee.setName("Hung");
-		employee.setAge(28);
-		employee.setSalary(20000);
-		employee.setBirthday(convertStringToDate("1992/09/10"));
-		listEmployee.add(employee);
-
-		employee = new Employee();
-		employee.setId(4);
-		employee.setName("Long");
-		employee.setAge(30);
-		employee.setSalary(15000);
-		employee.setBirthday(convertStringToDate("1991/05/15"));
-		listEmployee.add(employee);
-
-		employee = new Employee();
-		employee.setId(5);
-		employee.setName("Dat");
-		employee.setAge(24);
-		employee.setSalary(10000);
-		employee.setBirthday(convertStringToDate("1996/05/12"));
-		listEmployee.add(employee);
+		listEmployee.add(new Employee(1, "Thuy", 26, 12000, convertStringToDate("1994/02/16")));
+		listEmployee.add(new Employee(2, "Hoang", 24, 11000, convertStringToDate("1996/01/10")));
+		listEmployee.add(new Employee(3, "Long", 22, 14000, convertStringToDate("1998/12/19")));
+		listEmployee.add(new Employee(4, "Hung", 23, 10000, convertStringToDate("1997/07/22")));
+		listEmployee.add(new Employee(5, "Dat", 26, 13000, convertStringToDate("1994/10/20")));
 
 		FileWriter fileWriter = null;
 		try {
